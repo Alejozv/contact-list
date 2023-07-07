@@ -65,3 +65,14 @@ function eliminarcontacto(nombre) {
  
 const contactosactualizados = eliminarcontacto("Jorge");
 console.log(contactosactualizados);
+
+
+function cambiarTelefono(nombre, nuevoTelefono) {
+  const contacto = contactos.find(c => c.nombre === nombre);
+  if (contacto) {
+    contacto.telefono = nuevoTelefono;
+  }
+  return contactos;
+}
+
+console.log(cambiarTelefono('Paula', '555555555'));
